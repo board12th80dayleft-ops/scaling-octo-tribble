@@ -299,7 +299,7 @@ async def drm_handler(bot: Client, m: Message):
                     await m.reply_text(f"❌ Token failed. Trying next one...")
                     time.sleep(10)
                     result = helper.get_mps_and_keys2(url)                
-                mpd, keys = result
+                mpd, keys = helper.get_mps_and_keys2(url)
                 url = mpd
                 keys_string = " ".join([f"--key {key}" for key in keys])
 
